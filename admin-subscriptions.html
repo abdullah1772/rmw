@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Subscriptions</title>
+    <!-- Common styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/fonts/fonts.css">
+    <link rel="stylesheet" href="static/css/globals.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="static/css/admin-shared.css">
+    <!-- Page specific styles -->
+    <link rel="stylesheet" href="static/css/admin-subscriptions.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="static/assets/logo.png" alt="Logo">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admindashboard.html" class="nav-link">
+                    <i class="ri-home-6-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="ri-vip-crown-line"></i>
+                    <span>Subscriptions</span>
+                </a>
+                <a href="admin-users.html" class="nav-link">
+                    <i class="ri-user-2-line"></i>
+                    <span>Users</span>
+                </a>
+                <a href="admin-queries.html" class="nav-link">
+                    <i class="ri-error-warning-line"></i>
+                    <span>Queries</span>
+                </a>
+                <a href="admin-payments.html" class="nav-link">
+                    <i class="ri-file-list-2-line"></i>
+                    <span>Payments</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn">
+                    <i class="ri-lock-fill"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <nav class="top-navbar">
+                <div class="nav-left">
+                    <button class="menu-toggle">
+                        <i class="ri-menu-fold-fill"></i>
+                    </button>
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="notifications">
+                        <i class="ri-notification-line"></i>
+                    </div>
+                    <div class="profile">
+                        <div class="profile-image">
+                            <img src="static/assets/profile.svg" alt="Profile">
+                        </div>
+                        <span>Admin</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div class="content">
+                <!-- Stats Cards -->
+                <div class="stats-grid subscription-stats">
+                    <div class="stats-card">
+                        <h3 class="stats-title">Total Subscriptions</h3>
+                        <p class="stats-number">11K</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3 class="stats-title">New Subscriptions</h3>
+                        <p class="stats-number">621</p>
+                    </div>
+                    <div class="add-subscription">
+                        <button class="add-btn">
+                            <i class="ri-add-line"></i>
+                            Add
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Subscriptions Table -->
+                <div class="table-container">
+                    <table class="subscriptions-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Plan</th>
+                                <th>Status</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>johndoe@example.com</td>
+                                <td>Premium</td>
+                                <td>Active</td>
+                                <td>2025-01-15</td>
+                                <td>2026-01-15</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Edit</button>
+                                    <button class="action-button delete">Delete</button>
+                                    <button class="action-button renew">Renew</button>
+                                    <button class="action-button suspend">Suspend</button>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>janesmith@example.com</td>
+                                <td>Basic</td>
+                                <td>Expired</td>
+                                <td>2024-02-10</td>
+                                <td>2025-02-10</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Edit</button>
+                                    <button class="action-button delete">Delete</button>
+                                    <button class="action-button renew">Renew</button>
+                                    <button class="action-button suspend">Suspend</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mike Johnson</td>
+                                <td>mikej@example.com</td>
+                                <td>Pro</td>
+                                <td>Active</td>
+                                <td>2024-06-05</td>
+                                <td>2025-06-05</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Edit</button>
+                                    <button class="action-button delete">Delete</button>
+                                    <button class="action-button renew">Renew</button>
+                                    <button class="action-button suspend">Suspend</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Emily Brown</td>
+                                <td>emilyb@example.com</td>
+                                <td>Standard</td>
+                                <td>Canceled</td>
+                                <td>2024-08-20</td>
+                                <td>2025-08-20</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Edit</button>
+                                    <button class="action-button delete">Delete</button>
+                                    <button class="action-button renew">Renew</button>
+                                    <button class="action-button suspend">Suspend</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>David Wilson</td>
+                                <td>davidw@example.com</td>
+                                <td>Premium</td>
+                                <td>Active</td>
+                                <td>2024-05-10</td>
+                                <td>2025-05-10</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Edit</button>
+                                    <button class="action-button delete">Delete</button>
+                                    <button class="action-button renew">Renew</button>
+                                    <button class="action-button suspend">Suspend</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Sophia Martinez</td>
+                                <td>sophiam@example.com</td>
+                                <td>Pro</td>
+                                <td>Suspended</td>
+                                <td>2024-07-15</td>
+                                <td>2025-07-15</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Edit</button>
+                                    <button class="action-button delete">Delete</button>
+                                    <button class="action-button renew">Renew</button>
+                                    <button class="action-button activate">Activate</button>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                </div>
+            
+                <!-- Pagination -->
+                <div class="table-footer">
+                    <div class="entries-info">Showing 1-10 out of 15 entries</div>
+                    <div class="pagination">
+                        <button class="nav-btn">Prev</button>
+                        <button class="nav-btn active">1</button>
+                        <button class="nav-btn">2</button>
+                        <button class="nav-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+ 
+    <script src="static/js/admin.js"></script>
+</body>
+</html>

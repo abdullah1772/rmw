@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Your Personal AI Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/fonts/fonts.css">
+    <link rel="stylesheet" href="static/css/globals.css">
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            important: true,
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container-width">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <img src="static/assets/logo.png" alt="Logo" width="300">
+                </div>
+                <button class="menu-icon">
+                    <i class="ri-menu-line"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html#" class="nav-link"><h4>Home</h4></a>
+                    <a href="index.html#services" class="nav-link"><h4>Services</h4></a>
+                    <a href="index.html#about" class="nav-link"><h4>About Us</h4></a>
+                    <a href="index.html#pricing" class="nav-link"><h4>Pricing</h4></a>
+                    <a href="index.html#contact" class="nav-link"><h4>Contact</h4></a>
+                </div>
+                <a href="#" class="login-btn"><h2>Login</h2></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mobile-menu">
+        <div class="nav-links">
+            <a href="#" class="nav-link"><h4>Home</h4></a>
+            <a href="#services" class="nav-link"><h4>Services</h4></a>
+            <a href="#about" class="nav-link"><h4>About Us</h4></a>
+            <a href="#pricing" class="nav-link"><h4>Pricing</h4></a>
+            <a href="#contact" class="nav-link"><h4>Contact</h4></a>
+        </div>
+        <a href="#" class="login-btn"><h4>Login</h4></a>
+    </div>
+
+    <div class="container-width">
+        <section class="login-section">
+            <div class="login-card">
+                <div class="logo-section">
+                    <h1>LOGO HERE</h1>
+                    <h2>Welcome Back</h2>
+                    <p>We're glad to see you again! Log in to continue your journey towards better habits, improved mental clarity, and a more fulfilling lifestyle. Stay on track with personalized AI coaching, daily insights, and smart reminders.</p>
+                </div>
+            </div>
+            
+            <div class="login-form">
+                <h2>Login</h2>
+                <form action="index.html">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password*" required>
+                    </div>
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember Me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="login-submit">Login</button>
+                    <p class="signup-prompt">
+                        Don't have an account? <a href="register.html">Signup</a>
+                    </p>
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+                    <button type="button" class="google-login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="flex-shrink: 0;">
+                            <g clip-path="url(#clip0_10_260)">
+                                <path d="M23.9873 12.2245C23.9873 11.2413 23.9057 10.5238 23.729 9.77966H12.239V14.2176H18.9833C18.8474 15.3205 18.1132 16.9815 16.4814 18.0976L16.4585 18.2462L20.0915 20.9964L20.3431 21.0209C22.6547 18.9347 23.9873 15.8653 23.9873 12.2245Z" fill="#4285F4"/>
+                                <path d="M12.2391 23.9176C15.5433 23.9176 18.3171 22.8545 20.3432 21.0209L16.4815 18.0976C15.4481 18.8018 14.0611 19.2934 12.2391 19.2934C9.00291 19.2934 6.25622 17.2074 5.27711 14.324L5.13359 14.3359L1.35604 17.1927L1.30664 17.3269C3.31906 21.2334 7.45273 23.9176 12.2391 23.9176Z" fill="#34A853"/>
+                                <path d="M5.27702 14.324C5.01867 13.5799 4.86916 12.7826 4.86916 11.9588C4.86916 11.1349 5.01867 10.3377 5.26343 9.5936L5.25659 9.43513L1.4317 6.53241L1.30655 6.59058C0.47714 8.21168 0.0012207 10.0321 0.0012207 11.9588C0.0012207 13.8855 0.47714 15.7058 1.30655 17.3269L5.27702 14.324Z" fill="#FBBC05"/>
+                                <path d="M12.2391 4.62403C14.5371 4.62403 16.0871 5.59402 16.971 6.40461L20.4248 3.10928C18.3036 1.1826 15.5433 0 12.2391 0C7.45273 0 3.31906 2.68406 1.30664 6.59056L5.26351 9.59359C6.25622 6.7102 9.00291 4.62403 12.2391 4.62403Z" fill="#EB4335"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_10_260">
+                                    <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Log in with Google
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

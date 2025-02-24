@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Your Personal AI Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/fonts/fonts.css">
+    <link rel="stylesheet" href="static/css/globals.css">
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/otp.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            important: true,
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container-width">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <img src="static/assets/logo.png" alt="Logo" width="300">
+                </div>
+                <button class="menu-icon">
+                    <i class="ri-menu-line"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="#" class="nav-link"><h4>Home</h4></a>
+                    <a href="#services" class="nav-link"><h4>Services</h4></a>
+                    <a href="#about" class="nav-link"><h4>About Us</h4></a>
+                    <a href="#pricing" class="nav-link"><h4>Pricing</h4></a>
+                    <a href="#contact" class="nav-link"><h4>Contact</h4></a>
+                </div>
+                <a href="#" class="login-btn"><h2>Login</h2></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mobile-menu">
+        <div class="nav-links">
+            <a href="#" class="nav-link"><h4>Home</h4></a>
+            <a href="#services" class="nav-link"><h4>Services</h4></a>
+            <a href="#about" class="nav-link"><h4>About Us</h4></a>
+            <a href="#pricing" class="nav-link"><h4>Pricing</h4></a>
+            <a href="#contact" class="nav-link"><h4>Contact</h4></a>
+        </div>
+        <a href="#" class="login-btn"><h4>Login</h4></a>
+    </div>
+
+    <div class="container-width">
+        <section class="otp-section">
+            <div class="otp-card">
+                <div class="logo-section">
+                    <h1>LOGO HERE</h1>
+                    <h2>Join Us Today</h2>
+                    <p>Sign up today and unlock the full potential of AI-driven self-improvement! Get personalized coaching, habit-building insights, mental wellness support, and daily reminders—all designed to help you grow, stay motivated, and reach your goals.</p>
+                </div>
+            </div>
+            
+            <div class="otp-form">
+                <div class="title-section">
+                    <i class="ri-arrow-left-line"></i>
+                    <h2>OTP Verification</h2>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="otp" placeholder="Enter OTP*" required>
+                    </div>
+                    <button type="submit" class="otp-submit">Verify</button>
+                    <p class="resend-prompt">
+                        Did not receive an OTP? <a href="#">Resend</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

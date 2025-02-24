@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/fonts/fonts.css">
+    <link rel="stylesheet" href="static/css/globals.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="static/css/admindashboard.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="static/assets/logo.png" alt="Logo">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-link">
+                    <i class="ri-home-6-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="admin-subscriptions.html" class="nav-link">
+                    <i class="ri-vip-crown-line"></i>
+                    <span>Subscriptions</span>
+                </a>
+                <a href="admin-users.html" class="nav-link">
+                    <i class="ri-user-2-line"></i>
+                    <span>Users</span>
+                </a>
+                <a href="admin-queries.html" class="nav-link">
+                    <i class="ri-error-warning-line"></i>
+                    <span>Queries</span>
+                </a>
+                <a href="admin-payments.html" class="nav-link">
+                    <i class="ri-file-list-2-line"></i>
+                    <span>Payments</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn">
+                    <i class="ri-lock-fill"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <nav class="top-navbar">
+                <div class="nav-left">
+                    <button class="menu-toggle">
+                        <i class="ri-menu-fold-fill"></i>
+                    </button>
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="notifications">
+                        <i class="ri-notification-line"></i>
+                    </div>
+                    <div class="profile">
+                        <div class="profile-image">
+                            <img src="static/assets/profile.svg" alt="Profile">
+                        </div>
+                        <span>Admin</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div class="content">
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <h3 class="stats-title">Admins</h3>
+                        <p class="stats-number">1</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3 class="stats-title">Users</h3>
+                        <p class="stats-number">15K</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3 class="stats-title">Active Users</h3>
+                        <p class="stats-number">785</p>
+                    </div>
+                </div>
+
+                <div class="middle-section">
+                    <div class="chart-metrics">
+                        <h3 class="stats-title">Important Metrics</h3>
+                        <div class="chart-content">
+                            <div class="chart-image">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="195" height="197" viewBox="0 0 195 197" fill="none">
+                                    <path d="M111.183 1.7738C92.3898 -0.608703 73.3093 2.53833 56.2762 10.8299C39.2431 19.1214 24.9961 32.1979 15.2783 48.4596C5.56051 64.7212 0.793241 83.4627 1.55982 102.391C2.32639 121.32 8.59355 139.614 19.5945 155.037C30.5955 170.459 45.8533 182.341 63.5011 189.228C81.1489 196.115 100.421 197.709 118.961 193.814C137.5 189.92 154.502 180.706 167.887 167.3C181.272 153.894 190.46 136.878 194.325 118.332L98.9278 98.4479L111.183 1.7738Z" fill="#3CC3DF" stroke="white"/>
+                                  </svg>
+                            </div>
+                            <h4 class="chart-subtitle">Subscription Tier Breakdown</h4>
+                            <div class="chart-navigation">
+                                <button class="nav-btn">Prev</button>
+                                <button class="nav-btn active">1</button>
+                                <button class="nav-btn">2</button>
+                                <button class="nav-btn">3</button>
+                                <button class="nav-btn">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-stats">
+                        <div class="stats-card">
+                            <h3 class="stats-title">New Signups (month)</h3>
+                            <p class="stats-number">150</p>
+                        </div>
+                        <div class="stats-card">
+                            <h3 class="stats-title">Subscription Rate</h3>
+                            <p class="stats-number">17%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-stats">
+                    <div class="stats-card">
+                        <h3 class="stats-title">User Retention Rate</h3>
+                        <p class="stats-number">42%</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3 class="stats-title">Total Revenue</h3>
+                        <p class="stats-number">321K</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3 class="stats-title">MRR</h3>
+                        <p class="stats-number">110K</p>
+                    </div>
+                </div>
+
+                <div class="full-chart-metrics">
+                    <h3 class="stats-title">User Activity Metrics</h3>
+                    <div class="chart-content">
+                        <div class="chart-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="195" height="197" viewBox="0 0 195 197" fill="none">
+                                <path d="M111.183 1.7738C92.3898 -0.608703 73.3093 2.53833 56.2762 10.8299C39.2431 19.1214 24.9961 32.1979 15.2783 48.4596C5.56051 64.7212 0.793241 83.4627 1.55982 102.391C2.32639 121.32 8.59355 139.614 19.5945 155.037C30.5955 170.459 45.8533 182.341 63.5011 189.228C81.1489 196.115 100.421 197.709 118.961 193.814C137.5 189.92 154.502 180.706 167.887 167.3C181.272 153.894 190.46 136.878 194.325 118.332L98.9278 98.4479L111.183 1.7738Z" fill="#3CC3DF" stroke="white"/>
+                            </svg>
+                        </div>
+                        <h4 class="chart-subtitle">Monthly User Activity Overview</h4>
+                        <div class="chart-navigation">
+                            <button class="nav-btn">Prev</button>
+                            <button class="nav-btn active">1</button>
+                            <button class="nav-btn">2</button>
+                            <button class="nav-btn">3</button>
+                            <button class="nav-btn">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="static/js/admin.js"></script>
+</body>
+</html>

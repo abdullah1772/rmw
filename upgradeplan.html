@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrade Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/fonts/fonts.css">
+    <link rel="stylesheet" href="static/css/globals.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/pricing.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            important: true,
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container-width">
+        <a href="javascript:history.back()" class="back-button">
+            <i class="ri-arrow-left-line"></i>
+        </a>
+
+        <section class="pricing-section" id="pricing">
+            <h1 class="pricing-title"><span class="pricing-title-our">OUR</span> PRICING</h1>
+            <div class="pricing-divider"></div>
+        
+            <!-- Pricing Toggle -->
+            <div class="pricing-toggle">
+                <input type="radio" id="monthly" name="billing" checked>
+                <label for="monthly" class="toggle-btn">
+                    <span class="radio-circle"></span> Monthly
+                </label>
+            
+                <input type="radio" id="yearly" name="billing">
+                <label for="yearly" class="toggle-btn">
+                    <span class="radio-circle"></span> Yearly <span class="save-badge">Save 15%</span>
+                </label>
+            </div>
+            
+            <!-- Pricing Cards Container -->
+            <div class="pricing-cards">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <h2 class="card-title">Basic</h2>
+                    <div class="price">
+                        <span class="amount">$0</span>
+                        <span class="period">/Month</span>
+                    </div>
+                    <p class="plan-description">Basic Plan for Individuals</p>
+                    <button class="pricing-btn">Sign Up Now</button>
+                    <p class="billing-info">Billed Monthly</p>
+                    <div class="features-section">
+                        <h4>Free Plan Includes</h4>
+                        <ul class="features-list">
+                            <li>Basic AI Assistance</li>
+                            <li>Limited Chat History</li>
+                            <li>Daily Habit Reminders</li>
+                            <li>Basic Progress Tracking</li>
+                            <li>Weekly AI Insights</li>
+                            <li>Community Access</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Pro Plan -->
+                <div class="pricing-card featured">
+                    <h2 class="card-title">Pro</h2>
+                    <div class="price">
+                        <span class="amount">$49</span>
+                        <span class="period">/Month</span>
+                    </div>
+                    <p class="plan-description">Advanced Package for Growing Teams</p>
+                    <button class="pricing-btn">Start Free Trial</button>
+                    <p class="billing-info">Billed Monthly</p>
+                    <div class="features-section">
+                        <h4>All Basic Plan Features Plus</h4>
+                        <ul class="features-list">
+                            <li>Unlimited Chat History</li>
+                            <li>Custom Habit Plans</li>
+                            <li>Multiple Daily Reminders</li>
+                            <li>Guided Exercises</li>
+                            <li>Advanced Progress Tracking</li>
+                            <li>Journaling & Reflection Prompts</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Premium Plan -->
+                <div class="pricing-card">
+                    <h2 class="card-title">Premium</h2>
+                    <div class="price">
+                        <span class="amount">$99</span>
+                        <span class="period">/Month</span>
+                    </div>
+                    <p class="plan-description">Complete Package For Larger Teams</p>
+                    <button class="pricing-btn">Start Free Trial</button>
+                    <p class="billing-info">Billed Monthly</p>
+                    <div class="features-section">
+                        <h4>All Pro Plan Features Plus</h4>
+                        <ul class="features-list">
+                            <li>1-on-1 AI Coaching</li>
+                            <li>Smart Habit Alerts</li>
+                            <li>Deep Insights & Analytics</li>
+                            <li>Sleep & Wellness Tracking</li>
+                            <li>Integration with Other Apps</li>
+                            <li>Exclusive Content</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="static/js/main.js"></script>
+</body>
+</html>

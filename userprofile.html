@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/fonts/fonts.css">
+  <link rel="stylesheet" href="static/css/globals.css">
+  <link rel="stylesheet" href="static/css/userprofile.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+  <script>
+      tailwind.config = {
+          important: true,
+          corePlugins: {
+              preflight: false,
+          }
+      }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+          <button class="menu-toggle">
+            <i class="ri-menu-fold-line"></i>
+          </button>
+          <div class="nav-links">
+            <div class="nav-item active">
+                <i class="ri-shield-user-line"></i>
+                <h5><span>Profile Details</span></h5>
+            </div>
+            <div class="nav-item">
+                <i class="ri-vip-crown-line"></i>
+                <h5><span>My Subscriptions</span></h5>
+            </div>
+            
+            
+            
+          </div>
+          <!-- User Profile at Bottom -->
+          <div class="sidebar-profile">
+            <img src="static/assets/profile.svg" alt="Profile Picture" class="avatar">
+            <div class="user-info">
+              <span class="name">John Doe</span>
+              <span class="status">Premium</span>
+            </div>
+            <i class="ri-settings-line settings-icon"></i>
+          </div>
+        </nav>
+    
+        <!-- Main Content -->
+        <main class="main-content">
+          <div class="header">
+            <div class="header-left">
+              <button class="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
+              </button>
+              <h1>Profile Details</h1>
+            </div>
+            <button class="edit-btn">
+              <i class="ri-edit-line"></i>
+              Edit
+            </button>
+          </div>
+
+          <div class="profile-container">
+            <div class="divider"></div>
+            <div class="profile-section">
+              <div class="profile-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="188" height="188" viewBox="0 0 188 188" fill="none">
+                  <g filter="url(#filter0_d_61_768)">
+                    <circle cx="94" cy="90" r="86" stroke="#26B893" stroke-opacity="0.5" stroke-width="16" shape-rendering="crispEdges"/>
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_61_768" x="0" y="0" width="188" height="188" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="4"/>
+                      <feGaussianBlur stdDeviation="2"/>
+                      <feComposite in2="hardAlpha" operator="out"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_61_768"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_61_768" result="shape"/>
+                    </filter>
+                  </defs>
+                </svg>
+                <div class="profile-image-container">
+                  <img src="static/assets/profile.svg" alt="Profile Picture" class="profile-image">
+                  <button class="camera-btn">
+                    <i class="ri-camera-line"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="profile-info">
+                <h6>Alexa Rawles</h6>
+                <p>alexarawles@gmail.com</p>
+              </div>
+            </div>
+            <div class="divider"></div>
+          </div>
+
+          <form class="profile-form">
+              <div class="form-sections">
+                <div class="form-section">
+                  <p>Personal</p>
+                  <div class="form-row">
+                    <div class="name-row">
+                        <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" value="Alexa">
+                        </div>
+                        <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" value="Rawles">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <div class="select-wrapper">
+                      <select id="gender">
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Other</option>
+                      </select>
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <div class="date-wrapper">
+                      <input type="date" id="dob" value="1994-01-12">
+                      <i class="ri-calendar-line"></i>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="form-section">
+                  <p>Contact</p>
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <div class="phone-input">
+                      <div class="select-wrapper">
+                        <select id="countryCode">
+                          <option>+92</option>
+                        </select>
+                        <i class="ri-arrow-down-s-line"></i>
+                      </div>
+                      <input type="tel" id="phone" value="315 5301852">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="country">Country</label>
+                    <div class="select-wrapper">
+                      <select id="country">
+                        <option>Pakistan</option>
+                      </select>
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="button-group">
+                <button type="submit" class="save-btn">
+                    <h4>Save Changes</h4>
+                </button>
+                <button type="button" class="change-password-btn">
+                    <h4>Change Password</h4>
+                </button>
+                
+              </div>
+            </form>
+        </main>
+      </div>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>

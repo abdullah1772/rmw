@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Queries</title>
+    <!-- Common styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/fonts/fonts.css">
+    <link rel="stylesheet" href="static/css/globals.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="static/css/admin-shared.css">
+    <!-- Page specific styles -->
+    <link rel="stylesheet" href="static/css/admin-subscriptions.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="static/assets/logo.png" alt="Logo">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admindashboard.html" class="nav-link">
+                    <i class="ri-home-6-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="admin-subscriptions.html" class="nav-link">
+                    <i class="ri-vip-crown-line"></i>
+                    <span>Subscriptions</span>
+                </a>
+                <a href="admin-users.html" class="nav-link">
+                    <i class="ri-user-2-line"></i>
+                    <span>Users</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="ri-error-warning-line"></i>
+                    <span>Queries</span>
+                </a>
+                <a href="admin-payments.html" class="nav-link">
+                    <i class="ri-file-list-2-line"></i>
+                    <span>Payments</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn">
+                    <i class="ri-lock-fill"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <nav class="top-navbar">
+                <div class="nav-left">
+                    <button class="menu-toggle">
+                        <i class="ri-menu-fold-fill"></i>
+                    </button>
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="notifications">
+                        <i class="ri-notification-line"></i>
+                    </div>
+                    <div class="profile">
+                        <div class="profile-image">
+                            <img src="static/assets/profile.svg" alt="Profile">
+                        </div>
+                        <span>Admin</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div class="content">
+                <!-- Stats Cards -->
+                <div class="stats-grid subscription-stats">
+                    <div class="stats-card">
+                        <h3 class="stats-title">Total Payments</h3>
+                        <p class="stats-number">281</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3 class="stats-title">New Payments</h3>
+                        <p class="stats-number">32</p>
+                    </div>
+                    <div class="add-subscription">
+                        <button class="add-btn">
+                            <i class="ri-add-line"></i>
+                            Add
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Subscriptions Table -->
+                <div class="table-container">
+                    <table class="subscriptions-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                                <th>Status</th>
+                                <th>Submitted Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>johndoe@example.com</td>
+                                <td>Cannot Login</td>
+                                <td>I am unable to log into my account, even after resetting my password.</td>
+                                <td>New</td>
+                                <td>2025-02-20</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Reply</button>
+                                    <button class="action-button renew">Mark as Resolved</button>
+                                    <button class="action-button delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>janesmith@example.com</td>
+                                <td>Payment Issue</td>
+                                <td>I was charged twice for my subscription. Can you check?</td>
+                                <td>In Progress</td>
+                                <td>2025-02-18</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Reply</button>
+                                    <button class="action-button renew">Mark as Resolved</button>
+                                    <button class="action-button suspend">Close Query</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mike Johnson</td>
+                                <td>mikej@example.com</td>
+                                <td>Feature Request</td>
+                                <td>Can you add a dark mode option?</td>
+                                <td>New</td>
+                                <td>2025-02-21</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Reply</button>
+                                    <button class="action-button delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Emily Brown</td>
+                                <td>emilyb@example.com</td>
+                                <td>Subscription Cancellation</td>
+                                <td>I want to cancel my subscription, but I don’t see the option.</td>
+                                <td>Resolved</td>
+                                <td>2025-02-15</td>
+                                <td class="actions">
+                                    <button class="action-button suspend">Close Query</button>
+                                    <button class="action-button delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Daniel Lee</td>
+                                <td>daniell@example.com</td>
+                                <td>Bug Report</td>
+                                <td>The dashboard is not loading properly on mobile.</td>
+                                <td>In Progress</td>
+                                <td>2025-02-17</td>
+                                <td class="actions">
+                                    <button class="action-button edit">Reply</button>
+                                    <button class="action-button renew">Mark as Resolved</button>
+                                    <button class="action-button delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    
+                    
+                </div>
+            
+                <!-- Pagination -->
+                <div class="table-footer">
+                    <div class="entries-info">Showing 1-5 out of 15 entries</div>
+                    <div class="pagination">
+                        <button class="nav-btn">Prev</button>
+                        <button class="nav-btn active">1</button>
+                        <button class="nav-btn">2</button>
+                        <button class="nav-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+ 
+    <script src="static/js/admin.js"></script>
+</body>
+</html>

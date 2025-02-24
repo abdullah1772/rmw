@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Subscriptions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/fonts/fonts.css">
+  <link rel="stylesheet" href="static/css/globals.css">
+  <link rel="stylesheet" href="static/css/usersubscriptions.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+  <script>
+      tailwind.config = {
+          important: true,
+          corePlugins: {
+              preflight: false,
+          }
+      }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+          <button class="menu-toggle">
+            <i class="ri-menu-fold-line"></i>
+          </button>
+          <div class="nav-links">
+            <div class="nav-item">
+                <i class="ri-shield-user-line"></i>
+                <h5><span>Profile Details</span></h5>
+            </div>
+            <div class="nav-item active">
+                <i class="ri-vip-crown-line"></i>
+                <h5><span>My Subscriptions</span></h5>
+            </div>
+            
+            
+            
+          </div>
+          <!-- User Profile at Bottom -->
+          <div class="sidebar-profile">
+            <img src="static/assets/profile.svg" alt="Profile Picture" class="avatar">
+            <div class="user-info">
+              <span class="name">John Doe</span>
+              <span class="status">Premium</span>
+            </div>
+            <i class="ri-settings-line settings-icon"></i>
+          </div>
+        </nav>
+    
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+              <div class="header-left">
+                <button class="mobile-menu-btn">
+                  <i class="ri-menu-line"></i>
+                </button>
+                <h1>My Subscriptions</h1>
+              </div>
+            </div>
+          
+            <div class="content-wrapper">
+              <div class="profile-container">
+                <div class="profile-section">
+                  <div class="profile-image-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none">
+                      <g filter="url(#filter0_d_61_1256)">
+                        <circle cx="54" cy="50" r="46" stroke="#26B893" stroke-opacity="0.5" stroke-width="8" shape-rendering="crispEdges"/>
+                      </g>
+                      <defs>
+                        <filter id="filter0_d_61_1256" x="0" y="0" width="108" height="108" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                          <feOffset dy="4"/>
+                          <feGaussianBlur stdDeviation="2"/>
+                          <feComposite in2="hardAlpha" operator="out"/>
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_61_1256"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_61_1256" result="shape"/>
+                        </filter>
+                      </defs>
+                    </svg>
+                    <img src="static/assets/profile.svg" alt="Profile Picture" class="profile-image">
+                  </div>
+                  <div class="profile-info">
+                    <h5>Alexa Rawles</h5>
+                    <p>alexarawles@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="content-center">
+                <div class="subscription-content">
+                  <div class="current-plan">
+                    <p>Current Subscription Plan</p>
+                    <div class="plan-card">
+                      <div class="plan-info">
+                        <div class="plan-status">You're on the <span class="premium-text">Premium</span> Plan</div>
+                        <div class="days-left">11 Days Left</div>
+                      </div>
+                      <p class="expiry-text">Your Premium Plan will expire on 7 March, 2025</p>
+                      <div class="plan-actions">
+                        <button class="cancel-btn"><span>Cancel Subscription</span></button>
+                        <button class="upgrade-btn"><span>Upgrade Plan</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="payment-history">
+                  <p>Previous Subscription Payments</p>
+                  <div class="table-container">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>Plan</th>
+                          <th>Amount</th>
+                          <th>Payment Method</th>
+                          <th>Invoice</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>8-02-2025</td>
+                          <td>Premium</td>
+                          <td>$99</td>
+                          <td>Credit Card</td>
+                          <td><a href="#" class="download-link">Download</a></td>
+                        </tr>
+                        <!-- Repeat for other rows -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+      </div>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>
