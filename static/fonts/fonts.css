@@ -1,0 +1,15 @@
+/* Main font declarations */
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Font utility classes */
+.font-display {
+    font-family: 'Electrolize', sans-serif;
+}
+
+.font-sans {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}

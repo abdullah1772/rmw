@@ -1,0 +1,310 @@
+/*******************************************
+  CONTACT SECTION STYLES
+********************************************/
+
+.contact-section {
+    background-color: #010101;
+    color: #fff;
+    padding: 80px 0;
+    width: 100%;
+    position: relative;
+  }
+  
+  .contact-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 96px !important;
+}
+
+.contact-title-our {
+    color: #0B7264;
+}
+
+.contact-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Contact Text - Styled as h6 */
+.contact-text {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-text:hover {
+    color: #0B7264; /* Primary color on hover */
+}
+  
+  /* Container */
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+  
+  /* Left side: Info wrapper */
+  .contact-info-wrapper {
+    flex: 1;
+    min-width: 300px;
+    animation: fadeInLeft 1s ease forwards;
+  }
+  
+  /* Subtitle: "Have Questions? Let's Connect" */
+  .contact-subtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .contact-subtitle span {
+    color: #0B7264;
+  }
+  
+  /* Contact Info Icons */
+.contact-info-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-info-list li .ci-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #0B7264;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #0B7264;
+    transition: color 0.3s, transform 0.3s;
+}
+
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-link:hover svg {
+    fill: #fff; /* Change color on hover */
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+  
+  /* Right side: Form wrapper */
+/* Right side: Form wrapper */
+.contact-form-wrapper {
+    flex: 1;
+    min-width: 300px;
+    animation: fadeInRight 1s ease forwards;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Row for Email & Phone */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.half-width {
+    flex: 1;
+}
+
+/* Input & Textarea Styles */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #0B7264;
+    background: #010101;
+    color: #fff;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 20px;
+    font-family: 'Electrolize', sans-serif;
+}
+
+/* Placeholder Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #d9d9d9;
+    font-size: 20px;
+    font-family: 'Electrolize', sans-serif;
+}
+
+/* Textarea Resize */
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit Button */
+/* Container that holds the button - makes it right-aligned */
+.contact-form-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns child elements to the right */
+    padding: 20px 0; /* Example padding, adjust as needed */
+  }
+  
+  /* Button styles */
+  .contact-submit-btn {
+    display: flex;
+    flex-direction: row;       /* Icon + text in one row */
+    align-items: center;       /* Vertically center content */
+    justify-content: center;   /* Horizontally center text/icon inside the button (optional) */
+    gap: 8px;                  /* Space between text and icon */
+    
+    /* Figma dimensions */
+    width: 250px;
+    height: 80px;
+    flex-shrink: 0;
+  
+    /* Fonts & text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;           /* From Figma spec */
+    line-height: 1.2;          /* Adjust if needed */
+    
+    /* Colors & Border */
+    background-color: #0B7264;
+    border: 2px solid #0B7264;
+    color: #fff;               /* Make text/icon visible on green background */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Corner Radii (top-left & bottom-right bigger) */
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  
+    /* Optional shadow */
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+  
+  /* Hover effect */
+  .contact-submit-btn:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #0B7264; /* Keep border on hover */
+  }
+  
+  
+
+  
+  /*******************************************
+    RESPONSIVE DESIGN
+  ********************************************/
+  
+  /* Tablet and below */
+  @media (max-width: 992px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-info-wrapper,
+    .contact-form-wrapper {
+      width: 100%;
+      max-width: 600px;
+    }
+    .contact-title {
+        font-size: 48px !important;
+      }
+  }
+  
+  /* Mobile */
+  @media (max-width: 576px) {
+    .contact-title {
+      font-size: 32px;
+    }
+    .contact-subtitle {
+      font-size: 20px;
+    }
+    .contact-title {
+        font-size: 32px !important;
+      }
+  }
+  
+  /*******************************************
+    SIMPLE KEYFRAME ANIMATIONS
+  ********************************************/
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

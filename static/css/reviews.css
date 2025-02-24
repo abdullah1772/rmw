@@ -1,0 +1,361 @@
+/* Main Section Styles */
+.reviews-section {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible; /* Ensure overflow doesn't cut off the circle */
+}
+
+.reviews-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 96px !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.reviews-title-our {
+    color: #0B7264;
+}
+
+.reviews-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.reviews-subtitle {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Carousel Wrapper */
+.testimonials-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 80px 60px; /* Added vertical padding to accommodate the circle */
+    overflow: visible; /* Allow circle to be visible */
+}
+
+/* Nav Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #0B7264;
+    background-color: #0B7264;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+.nav-button:hover {
+    background-color: #010101;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Testimonials Container */
+.testimonials-container {
+    width: 100%;
+    overflow: visible; /* Allow circle to be visible */
+}
+
+/* Individual Testimonial */
+.testimonial {
+    display: none;
+    position: relative;
+    gap: 60px;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    overflow: visible; /* Allow circle to be visible */
+}
+
+.testimonial.active {
+    display: flex;
+}
+
+/* Shape + Image Container */
+.testimonial-shape {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    margin: 57px; /* Add margin to accommodate the circle */
+}
+
+.testimonial-shape::before {
+    content: '';
+    position: absolute;
+    top: -57px;
+    left: -57px;
+    width: 314px;
+    height: 314px;
+    background: #0B7264;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.testimonial-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 20px rgba(11, 114, 100, 0.3);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Content */
+.testimonial-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.testimonial-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-name {
+    font-family: 'Electrolize', sans-serif;
+    color: #0B7264;
+    font-size: 32px;
+}
+
+.author-dash {
+    color: #d9d9d9;
+    font-size: 32px;
+}
+
+.author-title {
+    font-family: 'Poppins', sans-serif;
+    color: #d9d9d9;
+    font-size: 32px;
+}
+
+/* Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.indicator {
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #0B7264;
+    width: 60px;
+}
+
+/* Previous CSS remains the same until the media queries */
+
+/* Responsive Styles */
+@media (max-width: 1024px) { /* Changed from 768px to 1024px for earlier switch to column layout */
+    .reviews-section {
+        padding: 60px 16px;
+    }
+    
+    .reviews-title {
+        font-size: 42px !important;
+    }
+    
+    .reviews-subtitle {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .testimonial-shape {
+        width: 140px;
+        height: 140px;
+        margin: 40px;
+    }
+    
+    .testimonial-shape::before {
+        width: 220px;
+        height: 220px;
+        top: -40px;
+        left: -40px;
+    }
+    
+    .testimonial-image {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .testimonial-content {
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .testimonial-text {
+        font-size: 18px;
+        margin: 0 auto 20px;
+        max-width: 600px;
+    }
+    
+    .testimonial-author {
+        justify-content: center;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .author-name,
+    .author-dash,
+    .author-title {
+        font-size: 24px;
+        white-space: nowrap; /* Prevent line breaks */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-shape {
+        width: 120px;
+        height: 120px;
+        margin: 35px;
+    }
+    
+    .testimonial-shape::before {
+        width: 190px;
+        height: 190px;
+        top: -35px;
+        left: -35px;
+    }
+    
+    .testimonial-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+    }
+    
+    .author-name,
+    .author-dash,
+    .author-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .testimonial-author {
+        width: 100%;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .author-name,
+    .author-dash,
+    .author-title {
+        font-size: 20px;
+        display: inline; /* Keep elements inline */
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-title {
+        font-size: 32px !important;
+    }
+    
+    .reviews-subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .testimonial-shape {
+        width: 100px;
+        height: 100px;
+        margin: 25px;
+    }
+    
+    .testimonial-shape::before {
+        width: 150px;
+        height: 150px;
+        top: -25px;
+        left: -25px;
+    }
+    
+    .testimonial-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .testimonial-text {
+        font-size: 14px;
+    }
+    
+    .author-name,
+    .author-dash,
+    .author-title {
+        font-size: 18px;
+    }
+    
+    .carousel-indicators {
+        margin-top: 20px;
+    }
+    
+    .indicator {
+        width: 30px;
+        height: 3px;
+    }
+    
+    .indicator.active {
+        width: 45px;
+    }
+}

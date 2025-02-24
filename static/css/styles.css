@@ -1,0 +1,581 @@
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #1f2937;
+    --accent-color: #f59e0b;
+}
+
+/* Custom animations */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+body {
+    background-color: #010101;
+    color: white;
+}
+
+.container-width {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar {
+    background-color: #1e1e1e;
+    height: 139px;
+    margin-top: 32px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-left: 120px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: #0B7264;
+    border-bottom: 2px solid #0B7264;
+    padding-bottom: 0.25rem;
+}
+
+.nav-link:hover {
+    color: #0B7264;
+}
+
+.login-btn {
+    background-color: #0B7264;
+    color: white;
+    width: 210px;
+    height: 77px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Add space from the navbar corner */
+}
+
+.login-btn:hover {
+    background-color: #0a6559;
+}
+
+.title-chatbot {
+    color: #0B7264 !important;
+    margin-bottom: 2rem !important;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 578px;
+}
+
+.hero-title {
+    color: #0B7264;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.hero-highlight {
+    color: #0B7264;
+    font-weight: 500;
+    max-width: 357px;
+    display: block;
+    line-height: 1.2 !important;
+}
+
+.dot-indicators {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.hero-tagline {
+    color: #999;
+    margin-bottom: 3.5rem !important; /* Increased spacing before button */
+}
+
+.title-subheading {
+    margin-bottom: 2rem !important;
+}
+
+.get-started-btn {
+    background-color: transparent;
+    color: white;
+    width: 337px;
+    height: 56px;
+    flex-shrink: 0;
+    border: 1px solid #0B7264;
+    border-radius: 100px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0 48px 0 20px;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-display) !important; /* Use Electrolize font */
+    font-size: 32px !important; /* Match h2 size */
+    position: relative;
+}
+
+.get-started-btn:hover {
+    background-color: rgba(11, 114, 100, 0.1);
+}
+
+.get-started-btn svg {
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    background-color: #0B7264;
+    border-radius: 100px;
+    padding: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dot.active {
+    background-color: #0B7264;
+}
+
+.carousel-text {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    min-height: 3em; /* Prevent layout shift */
+}
+
+.carousel-text.fade {
+    opacity: 0;
+}
+
+
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.98); /* Darker background */
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers content vertically */
+}
+
+.mobile-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;  /* Take full width */
+    text-align: center;  /* Center text alignment */
+}
+
+.mobile-menu .nav-link h4 {
+    color: #fff; /* White text for nav links */
+}
+
+.mobile-menu .login-btn {
+    display: block;
+    background: #0B7264;
+    padding: 0.4rem 1.5rem;
+    border-radius: 0.4rem;
+    margin: 0 auto;
+    width: 90%; /* Take up most of container width */
+    max-width: 280px; /* Maximum width for larger screens */
+    text-align: center;
+}
+
+.mobile-menu .login-btn h2 {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+
+
+/* Centering text inside button */
+.mobile-menu .login-btn h4 {
+    color: #fff;
+    font-size: 1rem; /* Slightly larger for better readability */
+    font-weight: 500;
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Take full width to align perfectly */
+}
+
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    z-index: 1001;
+}
+
+.close-menu {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff; /* White close button */
+    cursor: pointer;
+}
+
+
+.mobile-menu .login-btn {
+    display: block;
+    background: #0B7264;
+    padding: 0.4rem 1.5rem;
+    border-radius: 0.4rem;
+    margin: 0 auto;
+    width: 90%; /* Take up most of container width */
+    max-width: 280px; /* Maximum width for larger screens */
+    text-align: center;
+}
+
+.mobile-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center horizontally */
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mobile-menu .nav-link {
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu .nav-link h4 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        height: 100px;
+        margin-top: 20px;
+    }
+
+    .nav-links {
+        margin-left: 60px;
+        gap: 1.5rem;
+    }
+
+    .logo{
+        width:200px;
+        height:auto;
+    }
+
+    .login-btn {
+        width: 180px;
+        height: 60px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem; /* slightly smaller heading */
+    }
+    .hero-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .title-chatbot {
+        font-size: 80px !important;
+        color: #0B7264 !important;
+        margin-bottom: 2rem !important;
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 80px;
+        margin-top: 16px;
+    }
+
+    .navbar-container {
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    /* Hide desktop navigation elements */
+    .nav-links, 
+    .login-btn {
+        display: none;
+    }
+
+    .logo{
+        width:150px;
+        height:auto;
+    }
+
+    /* Show hamburger menu */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* Mobile menu styles */
+    .mobile-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 2rem 0;
+    }
+
+    .mobile-menu .nav-link {
+        width: auto;
+        text-align: center;
+    }
+
+    .mobile-menu .nav-link.active {
+        border-bottom: none;
+        position: relative;
+    }
+
+    .mobile-menu .nav-link.active::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 2px;
+        background-color: #0B7264;
+    }
+
+    .mobile-menu .login-btn {
+        display: flex;
+        width: 180px;
+        height: 50px;
+        margin-top: 2rem;
+        border-radius: 15px;
+    }
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    /* Keep the top text in hero-content; image moves below */
+    .hero-content {
+        order: 1;
+    }
+    .hero-image {
+        order: 2;
+        margin-top: 1.5rem;
+    }
+    /* Reduce font sizes for headings and carousel text */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    .carousel-text {
+        font-size: 1rem;
+    }
+    .dot-indicators {
+        display: flex;
+        justify-content: center;
+    }
+    .get-started-btn {
+        margin-top: 1rem;
+        align-self: center;
+    }
+
+    .title-chatbot {
+        font-size: 76px !important;
+        color: #0B7264 !important;
+        margin-bottom: 2rem !important;
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        height: 70px;
+        margin-top: 12px;
+        border-radius: 15px;
+    }
+
+    .logo{
+        width:100px;
+        height:auto;
+    }
+
+    .menu-icon {
+        font-size: 22px;
+    }
+
+    .mobile-menu .login-btn {
+        width: 160px;
+        height: 45px;
+    }
+
+    .mobile-menu .nav-link h4 {
+        font-size: 1.1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+    .hero-content h2 {
+        font-size: 1.25rem;
+    }
+    .carousel-text {
+        font-size: 0.9rem;
+    }
+    .get-started-btn {
+        width: 300px;
+        height: 48px;
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .title-chatbot {
+        font-size: 64px !important;
+        color: #0B7264 !important;
+        margin-bottom: 2rem !important;
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 60px;
+        margin-top: 10px;
+        border-radius: 12px;
+    }
+
+    .logo{
+        width:100px;
+        height:auto;
+    }
+
+    .menu-icon {
+        font-size: 20px;
+    }
+
+    .mobile-menu .login-btn {
+        width: 140px;
+        height: 40px;
+    }
+
+    .mobile-menu .nav-link h4 {
+        font-size: 1rem;
+    }
+
+    .mobile-menu .nav-links {
+        padding: 1.5rem 0;
+    }
+
+    .close-menu {
+        top: 1rem;
+        right: 1rem;
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+    .carousel-text {
+        font-size: 0.8rem;
+    }
+    .get-started-btn {
+        width: 300px;
+        height: 42px;
+        font-size: 0.8rem;
+    }
+    .hero-image {
+        margin-top: 1rem;
+    }
+
+    .title-chatbot {
+        font-size: 64px !important;
+        color: #0B7264 !important;
+        margin-bottom: 2rem !important;
+        margin-top: 2rem !important;
+    }
+}

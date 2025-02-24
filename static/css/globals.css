@@ -1,0 +1,83 @@
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global variables */
+:root {
+    --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-display: 'Electrolize', sans-serif;
+    --max-width: 1200px;
+    --border-radius: 0.5rem;
+}
+
+/* Base styles */
+html {
+    font-family: var(--font-sans);
+    scroll-behavior: auto; /* Disables smooth scroll */
+    scroll-padding-top: 100px; /* Adjust this value based on your navbar height */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Heading styles */
+h1,
+.h1,
+:is(h1, .h1) {
+    font-family: var(--font-display) !important;
+    font-size: 96px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+}
+
+h2,
+.h2,
+:is(h2, .h2) {
+    font-family: var(--font-display) !important;
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+}
+
+h3,
+.h3,
+:is(h3, .h3) {
+    font-family: var(--font-sans) !important;
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+}
+
+h4,
+.h4,
+:is(h4, .h4) {
+    font-family: var(--font-display) !important;
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+}
+
+h5,
+.h5,
+:is(h5, .h5) {
+    font-family: var(--font-sans) !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
+
+h6 {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+p {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+}
+

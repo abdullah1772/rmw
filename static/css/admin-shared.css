@@ -1,0 +1,756 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #d9d9d9;
+}
+
+/* Layout */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    min-width: 300px;
+    background: #fff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.logo {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-nav {
+    padding: 1rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #0f172a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
+
+.nav-link:hover {
+    background: #f1f5f9;
+}
+
+.nav-link.active {
+    background: #f1f5f9;
+    border-left: 3px solid #0B7264;
+    font-weight: 600;
+    color: #0B7264;
+}
+
+.nav-link.active i {
+    color: #0B7264;
+}
+
+.nav-link i {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.sidebar-footer {
+    padding: 1rem 0;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 208px;
+    height: 66px;
+    flex-shrink: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    line-height: 1.2;
+    background-color: #c83030;
+    border: 1px solid #c83030;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0px 2px 4px 0px rgba(136, 144, 194, 0.20), 0px 5px 15px 0px rgba(37, 44, 97, 0.15);
+    margin: 0 auto;
+}
+
+.logout-btn:hover {
+    background-color: #c83030;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(200, 48, 48, 0.4);
+}
+
+.logout-btn i {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logout-btn span {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Navbar */
+.top-navbar {
+    background: #fff;
+    padding: 1rem;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    color: #64748b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+}
+
+.menu-toggle:hover {
+    color: #0f172a;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #f1f5f9;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    width: 393px;
+    height:38px;
+    margin-left: 0;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    margin-left: 0.5rem;
+    outline: none;
+    width: 100%;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notifications {
+    position: relative;
+}
+
+.notifications i {
+    color: #667c7c;
+    font-size: 24px;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.125rem 0.375rem;
+    border-radius: 9999px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;  /* Reduced from 0.75rem */
+    cursor: pointer;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 24px;
+    height: 24px;
+}
+
+.profile span {
+    color: #000;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile i {
+    color: #667c7c;
+    font-size: 24px;
+}
+
+/* Content Area */
+.content {
+    padding: 2rem;
+    flex: 1;
+    width: 960px;
+    max-width: 100%;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.content h1 {
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+}
+
+/* Add these new styles */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+    padding-left: 0;
+}
+
+.menu-toggle:hover {
+    color: #0f172a;
+}
+
+.sidebar.collapsed {
+    left: -300px;
+}
+
+.sidebar.collapsed + .main-content {
+    margin-left: 0;
+}
+
+.content {
+    padding: 2rem;
+    flex: 1;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.chart-navigation {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.side-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+/* Bottom Stats Grid */
+.bottom-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Stats Card Base Styles */
+.stats-card {
+    width: 300px;
+    height: 147px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stats-cardu {
+    width: 280px;
+    height: 147px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Stats Card Title */
+.stats-title {
+    color: #000;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+}
+
+/* Stats Card Number */
+.stats-number {
+    color: #0B7264;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 80px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+    margin: 0;
+    text-align: right;
+}
+
+/* Revenue Section */
+.revenue-section {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.wide {
+    width: calc(50% - 0.75rem);
+    height: 147px;
+}
+
+
+.full-width {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+}
+
+
+/* Navigation Buttons */
+.nav-btn {
+    width: 32px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: #FFF;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Previous and Next buttons */
+.nav-btn:first-child,
+.nav-btn:last-child {
+    border: none;
+    background: none;
+    width: auto;
+    padding: 0 0.5rem;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Active Button State */
+.nav-btn.active {
+    background: #0B7264;
+    color: #FFF;
+    border: 1px solid #000;
+}
+
+/* Hover State */
+.nav-btn:hover:not(.active):not(:first-child):not(:last-child) {
+    background: #F5F5F5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .chart-navigation {
+        justify-content: center;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .middle-section {
+        flex-direction: column;
+    }
+    
+    .chart-metrics {
+        width: 100%;
+    }
+    
+    .stats-grid, .bottom-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid, .bottom-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .revenue-section {
+        flex-direction: column;
+    }
+    
+    .wide {
+        width: 100%;
+    }
+}
+
+/* Full Width Chart Box */
+.full-chart-metrics {
+    width: 950px;
+    height: 321px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+/* High-specificity selectors for sidebar nav */
+.sidebar .sidebar-nav .nav-link {
+    width: 80%;
+    margin: 0.25rem auto;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar .sidebar-nav .nav-link.active {
+    background: #0B7264;
+    color: white;
+    border-left: none;
+    font-weight: 500;
+}
+
+.sidebar .sidebar-nav .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: white;
+}
+
+.sidebar .sidebar-nav .nav-link.active i {
+    color: white;
+}
+
+
+/* Responsive styles for admin dashboard */
+
+/* Large screens (≤1024px) */
+@media screen and (max-width: 1024px) {
+    /* Sidebar behavior */
+    .sidebar {
+        transform: translateX(-300px);  /* Changed from -100% to exact width */
+        position: fixed;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.show {  /* New class for mobile view */
+        transform: translateX(0);
+    }
+
+    /* Main content adjustments */
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* When sidebar is shown, add overlay */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+        padding: 1.5rem;
+        max-width: 960px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .full-chart-metrics {
+        width: 100%;
+    }
+}
+
+/* Medium screens (≤768px) */
+@media screen and (max-width: 768px) {
+    /* Stats grid adjustments */
+    .stats-grid,
+    .bottom-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stats-card,
+    .stats-cardu {
+        width: 100%;
+    }
+
+    /* Chart metrics adjustments */
+    .chart-metrics,
+    .full-chart-metrics {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .middle-section {
+        flex-direction: column;
+    }
+
+    /* Revenue section adjustments */
+    .revenue-section {
+        flex-direction: column;
+    }
+
+    .wide {
+        width: 100%;
+    }
+
+    /* Top navbar adjustments */
+    .nav-right {
+        gap: 1rem;
+    }
+
+    .search-bar {
+        width: 200px;
+    }
+
+    .profile span {
+        display: none;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+}
+
+/* Small screens (≤640px) */
+@media screen and (max-width: 640px) {
+    /* Stats grid adjustments */
+    .stats-grid,
+    .bottom-stats {
+        grid-template-columns: 1fr;
+    }
+
+    /* Top navbar adjustments */
+    .search-bar {
+        display: none;
+    }
+
+    .nav-right {
+        gap: 0.75rem;
+    }
+
+    /* Content padding adjustment */
+    .content {
+        padding: 1rem;
+    }
+
+    /* Table responsiveness */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -1rem;
+        padding: 0 1rem;
+    }
+
+    .table-responsive table {
+        min-width: 500px;
+    }
+}
+
+/* Extra small screens (≤480px) */
+@media screen and (max-width: 480px) {
+    /* Further simplify layout */
+    .stats-card,
+    .stats-cardu {
+        height: auto;
+        min-height: 120px;
+    }
+
+    .stats-number {
+        font-size: 48px !important;
+    }
+
+    .stats-title {
+        font-size: 16px !important;
+    }
+
+    /* Adjust navigation */
+    .nav-btn {
+        width: 28px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    /* Sidebar adjustments */
+    .sidebar {
+        width: 280px;
+        min-width: 280px;
+    }
+
+    .logout-btn {
+        width: 180px;
+        height: 56px;
+        font-size: 20px;
+    }
+
+    .logout-btn span {
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 0.75rem;
+    }
+
+    .stats-card,
+    .stats-cardu {
+        padding: 1rem;
+    }
+
+    .chart-metrics,
+    .full-chart-metrics {
+        padding: 1rem;
+    }
+
+    .stats-number {
+        font-size: 48px !important;
+    }
+
+    .stats-title {
+        font-size: 16px !important;
+    }
+}
+
+/* Table wrapper for horizontal scrolling */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* Ensure tables maintain structure */
+.table-wrapper table {
+    width: 100%;
+    white-space: nowrap;
+    border-collapse: collapse;
+}
+
+/* Maintain table cell padding */
+.table-wrapper th,
+.table-wrapper td {
+    padding: 0.75rem;
+    text-align: left;
+}

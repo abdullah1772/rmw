@@ -1,0 +1,388 @@
+.back-button {
+    display: inline-block;
+    color: #fff;
+    font-size: 32px;
+    margin: 80px 0 0 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 40px;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+}
+
+.pricing-section {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.pricing-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 96px !important;
+}
+
+.pricing-title-our {
+    color: #0B7264;
+}
+
+.pricing-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.pricing-toggle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(11, 114, 100, 0.8);
+    width: fit-content;
+    margin: 0 auto 50px;
+}
+
+/* Hide default radio buttons */
+.pricing-toggle input[type="radio"] {
+    display: none;
+}
+
+/* Label as Toggle Button */
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Custom Radio Button */
+.radio-circle {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(11, 114, 100, 0.8);
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Checked State */
+.pricing-toggle input[type="radio"]:checked + .toggle-btn {
+    color: white;
+    font-weight: bold;
+}
+
+/* Fill radio button when selected */
+.pricing-toggle input[type="radio"]:checked + .toggle-btn .radio-circle {
+    background: rgba(11, 114, 100, 0.8);
+    box-shadow: 0 0 6px rgba(11, 114, 100, 0.8);
+}
+
+/* Hover Effect */
+.toggle-btn:hover {
+    color: white;
+}
+
+/* Save Badge */
+.save-badge {
+    background: rgba(11, 114, 100, 0.8);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 8px;
+    color: white;
+}
+
+/* Cards Container */
+.pricing-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Card Styles */
+.pricing-card {
+    background: #1E1E1E;
+    border-radius: 20px;
+    padding: 40px;
+    width: 412px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #0B7264;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(11, 114, 100, 0.2);
+}
+
+.pricing-card.featured {
+    border: 1px solid #0B7264;
+    background: linear-gradient(180deg, #072E29 0%, #1C4D58 100%);
+    transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.card-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.currency {
+    font-size: 24px;
+    color: #0B7264;
+    vertical-align: top;
+    font-family: Electrolize, sans-serif;
+}
+
+.amount {
+    font-size: 48px;
+    color: #0B7264;
+    font-family: Electrolize, sans-serif;
+}
+
+.period {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Electrolize, sans-serif;
+}
+
+.plan-description {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.pricing-btn {
+    background: transparent;
+    border: 1px solid #0B7264;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.pricing-btn:hover {
+    background: #0B7264;
+}
+
+.featured .pricing-btn {
+    background: #0B7264;
+}
+
+.featured .pricing-btn:hover {
+    background: #095a4f;
+}
+
+.billing-info {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+/* Features Section */
+.features-section {
+    margin-top: auto;
+}
+
+.features-section h3 {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.features-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0B7264;
+}
+
+/* For screens up to 1024px */
+@media (max-width: 1024px) {
+    .pricing-section {
+        padding: 60px 20px;
+    }
+    .pricing-title {
+        font-size: 72px !important;
+        margin-bottom: 20px;
+    }
+    .pricing-divider {
+        margin-bottom: 40px;
+    }
+    .pricing-toggle {
+        margin: 0 auto 40px;
+        padding: 8px 16px;
+        gap: 16px;
+    }
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .pricing-card {
+        width: 100%;
+        max-width: 500px;
+        padding: 30px;
+    }
+    .pricing-card.featured {
+        order: 0;  /* This ensures it stays in the middle */
+    }
+    .billing-info {
+        margin-bottom: 30px;
+    }
+}
+
+/* For screens up to 768px */
+@media (max-width: 768px) {
+    .pricing-title {
+        font-size: 36px !important;
+    }
+    .pricing-card {
+        padding: 20px;
+    }
+    .toggle-btn {
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+    .pricing-card.featured {
+        transform: scale(1);
+        order: 0;  /* Keep it in the middle */
+    }
+    .back-button {
+        font-size: 28px;
+        margin: 40px 0 0 0;
+        left: 20px;
+    }
+}
+
+/* For screens up to 640px */
+@media (max-width: 640px) {
+    .pricing-section {
+        padding: 50px 10px;
+    }
+    .pricing-title {
+        font-size: 32px !important;
+    }
+    .pricing-divider {
+        margin-bottom: 30px;
+    }
+    .pricing-toggle {
+        padding: 6px 12px;
+        gap: 12px;
+    }
+    .toggle-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    .pricing-card {
+        padding: 20px;
+        width: 90%;
+        max-width: none;
+    }
+    .card-title {
+        font-size: 28px;
+    }
+    .amount {
+        font-size: 40px;
+    }
+    .currency {
+        font-size: 20px;
+    }
+    .period {
+        font-size: 14px;
+    }
+    .pricing-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+    .pricing-section {
+        padding: 40px 5px;
+    }
+    .pricing-title {
+        font-size: 28px !important;
+    }
+    .pricing-divider {
+        margin-bottom: 20px;
+    }
+    .pricing-toggle {
+        padding: 4px 10px;
+        gap: 8px;
+    }
+    .toggle-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    .pricing-card {
+        padding: 15px;
+        width: 100%;
+    }
+    .card-title {
+        font-size: 24px;
+    }
+    .amount {
+        font-size: 32px;
+    }
+    .currency {
+        font-size: 18px;
+    }
+    .period {
+        font-size: 12px;
+    }
+    .pricing-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    .billing-info {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .back-button {
+        font-size: 24px;
+        margin: 30px 0 0 0;
+        left: 15px;
+    }
+}
